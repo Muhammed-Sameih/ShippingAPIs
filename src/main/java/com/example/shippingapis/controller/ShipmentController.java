@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("shipments/")
+@RequestMapping("/shipments")
 @Validated
 public class ShipmentController {
     @Autowired
