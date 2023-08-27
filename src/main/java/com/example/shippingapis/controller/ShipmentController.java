@@ -26,17 +26,9 @@ public class ShipmentController {
     public void create(@RequestBody @Valid ShipmentModelForRequest shipmentModel) {shipmentService.createShipments(shipmentModel);}
 
     @GetMapping("/by-customer-and-date-range")
-    public ResponseEntity<List<ShipmentModelForResponse>> getOrdersByCustomerAndDateRange(
+    public ResponseEntity<List<ShipmentModelForResponse>> getShipmentsByCustomerAndDateRange(
             @RequestParam("email") @NotBlank(message = "Customer email is required!") @Email(message = "Customer email is not valid!") String email,
             @RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate,
             @RequestParam("endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endDate
-    ) {
-        List<ShipmentModelForResponse> shipments = shipmentService.findByCustomerAndRange(email, startDate, endDate);
-        if (!shipments.isEmpty()) {
-            return new ResponseEntity<>(shipments, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
+    ) {return shipmentService.findByCustomerAndRange(email, startDate, endDate);}
 }
