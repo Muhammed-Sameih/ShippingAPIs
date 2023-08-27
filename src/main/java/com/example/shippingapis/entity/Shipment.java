@@ -37,13 +37,4 @@ public class Shipment {
     @ManyToOne
     @JoinColumn(name = "store_id")
     private Store store;
-
-    public Shipment(LocalDateTime shipmentDate, String customerEmail, String status, String shippingLocation, String orderCode, Store store) {
-        this.shipmentDate = shipmentDate;
-        this.customerEmail = customerEmail;
-        this.status = status;
-        this.shippingLocation = shippingLocation;
-        this.orderCode = orderCode;
-        this.store = store;
-    }
 }

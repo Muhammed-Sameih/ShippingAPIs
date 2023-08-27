@@ -32,7 +32,7 @@ public class ShipmentServiceImpl implements ShipmentService {
                 .stream()
                 .forEach(storeModel -> {
                     Store store = storeService.create(storeModel);
-                    Shipment shipment = new Shipment(LocalDateTime.now(),shipmentModel.getCustomerEmail(),"SHIPPED",shipmentModel.getCustomerLocation(),shipmentModel.getOrderCode(),store);
+                    Shipment shipment = new Shipment(null,LocalDateTime.now(),shipmentModel.getCustomerEmail(),"SHIPPED",shipmentModel.getCustomerLocation(),shipmentModel.getOrderCode(),store);
                     shipment = shipmentRepo.save(shipment);
                     shipmentItemService.create(storeModel.getItems(),shipment,store);
                 });
