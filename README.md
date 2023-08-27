@@ -24,7 +24,7 @@ And it encapsulates shipping-related functionalities
 
 ## Features ✨
 
-As a customer you can do this :
+you can do this :
 
 - You can list all of your shipments between a start and end date.
 - You can create shipments with items.
