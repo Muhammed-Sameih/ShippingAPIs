@@ -33,20 +33,20 @@ public class ShipmentRepoTest {
 
     @BeforeEach
     void setUp() {
-        this.shipment1 = entityManager.merge(new Shipment(now(),
+        this.shipment1 = entityManager.merge(new Shipment(null,now(),
                 "user1@example.com",
                 "CREATED",
                 "cairo",
                 "O-123",
                 null));
 
-        this.shipment2= entityManager.merge(new Shipment(now(),
+        this.shipment2= entityManager.merge(new Shipment(null,now(),
                 "user2@example.com",
                 "SHIPPED",
                 "cairo",
                 "O-124",
                 null));
-        this.shipment3 = entityManager.merge(new Shipment(now(),
+        this.shipment3 = entityManager.merge(new Shipment(null,now(),
                 "user1@example.com",
                 "DELIVERED",
                 "cairo",

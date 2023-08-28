@@ -53,7 +53,7 @@ class ShipmentServiceImplTest {
     void testCreateShipments() {
         // Arrange
         Store store = new Store(1L, "S-123", "Cairo");
-        Shipment shipment = new Shipment(LocalDateTime.now(), "user@example.com", "SHIPPED", "cairo", "O-127", store);
+        Shipment shipment = new Shipment(null,LocalDateTime.now(), "user@example.com", "SHIPPED", "cairo", "O-127", store);
 
         when(storeService.create(any(StoreModelForRequest.class))).thenReturn(store);
         when(shipmentRepo.save(any(Shipment.class))).thenReturn(shipment);

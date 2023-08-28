@@ -36,7 +36,7 @@ public class ShipmentItemRepoTest {
         store = entityManager.merge(new Store(1L,
                 "S-123",
                 "cairo"));
-        shipment = entityManager.merge(new Shipment(LocalDateTime.now(),
+        shipment = entityManager.merge(new Shipment(null,LocalDateTime.now(),
                 "user@example.com",
                 "CREATED",
                 "cairo",
@@ -77,7 +77,7 @@ public class ShipmentItemRepoTest {
     @Test
     void findByShipment_ShouldReturnEmptyShipmentItemIfShipmentDoesNotExist() {
         // arrange
-        Shipment invalidShipment = entityManager.persist(new Shipment(LocalDateTime.now(), "xUser@example.com", "CREATED", "Alex", "O-127", store));
+        Shipment invalidShipment = entityManager.persist(new Shipment(null,LocalDateTime.now(), "xUser@example.com", "CREATED", "Alex", "O-127", store));
 
         // act
         List<ShipmentItem> actualList = shipmentItemRepo.findByShipment(invalidShipment);
