@@ -113,18 +113,6 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<version>9.16.3</version>
-				<configuration>
-					<url>jdbc:postgresql://localhost:5432/orders</url>
-					<user>postgres</user>
-					<password>87654321ms</password>
-					<!-- Enable clean operation -->
-					<cleanDisabled>false</cleanDisabled>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
