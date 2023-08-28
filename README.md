@@ -97,7 +97,7 @@ you can do this :
 Swagger URL
 
 ```
-https://
+https://shipping-service-dr3e.onrender.com/swagger-ui/index.html#/
 ```
 
 ## Database Schema
