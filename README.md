@@ -106,7 +106,7 @@ https://shipping-service-dr3e.onrender.com/swagger-ui/index.html#/
 
 ## Installation
 
-To run the Bank Management System locally, you will need the following:
+To run the Shipping System locally, you will need the following:
 - Java 17 or higher
 - Maven
 - PostgreSQL
