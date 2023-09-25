@@ -111,7 +111,7 @@ To run the Shipping System locally, you will need the following:
 - Maven
 - PostgreSQL
 
-Once you have the required tools installed, follow these steps to install the Bank Management System:
+Once you have the required tools installed, follow these steps to install the Shipping System:
 
 1. Clone this repository:
     ```shell
